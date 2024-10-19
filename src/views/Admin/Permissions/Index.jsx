@@ -141,14 +141,14 @@ export default function index() {
                       </tbody>
                     </table>
                   </div>
-                  <div style={{ marginTop: '10px' }}>
-                  <Pagination
-                    currentPage={pagination.currentPage}
-                    perPage={pagination.perPage}
-                    total={pagination.total}
-                    onChange={(pageNumber) => fetchData(pageNumber, keywords)}
-                    position="end"
-                  />
+                  <div style={{ marginTop: '14px' }}>
+                    <Pagination
+                      currentPage={pagination.currentPage}
+                      perPage={pagination.perPage}
+                      total={Math.ceil(pagination.total / pagination.perPage)}
+                      onChange={(pageNumber) => fetchData(pageNumber, keywords)}
+                      position="end"
+                    />
                   </div>
                 </div>
               </div>
