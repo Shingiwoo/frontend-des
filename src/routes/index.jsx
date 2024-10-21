@@ -38,6 +38,15 @@ import UsersCreate from "../views/Admin/Users/Create";
 //import view users edit
 import UsersEdit from "../views/Admin/Users/Edit";
 
+//import view categories index
+import CategoriesIndex from "../views/Admin/Categories/Index";
+
+//import view categories create
+import CategoriesCreate from "../views/Admin/Categories/Create";
+
+//import view categories edit
+import CategoriesEdit from "../views/Admin/Categories/Edit";
+
 export default function RoutesIndex() {
   return (
     <Routes>
@@ -123,6 +132,36 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <UsersEdit />
+          </PrivateRoutes>
+        }
+      />
+
+      {/* private route "/admin/categories" */}
+      <Route
+        path="/admin/categories"
+        element={
+          <PrivateRoutes>
+            <CategoriesIndex />
+          </PrivateRoutes>
+        }
+      />
+
+      {/* private route "/admin/categories/create" */}
+      <Route
+        path="/admin/categories/create"
+        element={
+          <PrivateRoutes>
+            <CategoriesCreate />
+          </PrivateRoutes>
+        }
+      />
+
+      {/* private route "/admin/categories/edit" */}
+      <Route
+        path="/admin/categories/edit/:id"
+        element={
+          <PrivateRoutes>
+            <CategoriesEdit />
           </PrivateRoutes>
         }
       />
