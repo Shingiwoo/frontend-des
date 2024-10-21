@@ -16,8 +16,8 @@ import Cookies from "js-cookie";
 //import toast
 import toast from "react-hot-toast";
 
-// Import Komponen Quill
-import MyQuillEditor from "../../../components/general/Quill";
+// Import Komponen CKEditor
+import MyCKEditor from "../../../components/general/CKEditor";
 
 export default function PostsEdit() {
   //title page
@@ -192,9 +192,9 @@ export default function PostsEdit() {
 
                     <div className="mb-3">
                       <label className="form-label fw-bold">Content</label>
-                      <MyQuillEditor
+                      <MyCKEditor
                         value={content}
-                        onChange={(content) => setContent(content)}  // Tangkap perubahan dari editor Quill
+                        onChange={(content) => setContent(content)}  // Tangkap perubahan dari CKEditor
                       />
                     </div>
                     {errors.content && (
