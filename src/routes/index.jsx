@@ -80,6 +80,15 @@ import PhotosIndex from "../views/Admin/Photos/Index";
 //import view sliders index
 import SlidersIndex from "../views/Admin/Sliders/Index";
 
+//import view aparaturs index
+import AparatursIndex from "../views/Admin/Aparaturs/Index";
+
+//import view aparaturs create
+import AparatursCreate from "../views/Admin/Aparaturs/Create";
+
+//import view aparaturs edit
+import AparatursEdit from "../views/Admin/Aparaturs/Edit";
+
 export default function RoutesIndex() {
   return (
     <Routes>
@@ -305,6 +314,36 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <SlidersIndex />
+          </PrivateRoutes>
+        }
+      />
+      
+      {/* private route "/admin/aparaturs" */}
+      <Route
+        path="/admin/aparaturs"
+        element={
+          <PrivateRoutes>
+            <AparatursIndex />
+          </PrivateRoutes>
+        }
+      />
+      
+      {/* private route "/admin/aparaturs/create" */}
+      <Route
+        path="/admin/aparaturs/create"
+        element={
+          <PrivateRoutes>
+            <AparatursCreate />
+          </PrivateRoutes>
+        }
+      />
+      
+      {/* private route "/admin/aparaturs/edit" */}
+      <Route
+        path="/admin/aparaturs/edit/:id"
+        element={
+          <PrivateRoutes>
+            <AparatursEdit />
           </PrivateRoutes>
         }
       />      
