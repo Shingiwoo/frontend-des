@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 const Api = axios.create({
     
     //set endpoint API
-    baseURL: 'http://localhost:8000/',
+    baseURL: 'https://desa.appshin.xyz/',
 
     //set header axios
     headers: {
