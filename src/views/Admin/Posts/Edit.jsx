@@ -16,8 +16,8 @@ import Cookies from "js-cookie";
 //import toast
 import toast from "react-hot-toast";
 
-// Import Komponen CKEditor
-import MyCKEditor from "../../../components/general/CKEditor";
+// Import Komponen TinyMCE
+import TinyMCE from "../../../components/general/TinyMCE";  
 
 export default function PostsEdit() {
   //title page
@@ -192,9 +192,9 @@ export default function PostsEdit() {
 
                     <div className="mb-3">
                       <label className="form-label fw-bold">Content</label>
-                      <MyCKEditor
+                      <TinyMCE
                         value={content}
-                        onChange={(content) => setContent(content)}  // Tangkap perubahan dari CKEditor
+                        onChange={(content) => setContent(content)}
                       />
                     </div>
                     {errors.content && (
