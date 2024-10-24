@@ -40,27 +40,26 @@ export default function login() {
       password: password,
     })
       .then((response) => {
-        //set token to cookies
+        console.log(response); // Tambahkan ini untuk melihat respons API
+
+        // lanjutkan jika respons valid
         Cookies.set("token", response.data.token);
-
-        //set user to cookies
         Cookies.set("user", JSON.stringify(response.data.user));
-
-        //set permissions to cookies
         Cookies.set("permissions", JSON.stringify(response.data.permissions));
 
-        //show toast
         toast.success("Login Successfully!", {
           position: "top-right",
           duration: 4000,
         });
 
-        //redirect dashboard page
         navigate("/admin/dashboard");
       })
       .catch((error) => {
-        //set response error to state
-        setErrors(error.response.data);
+        if (error.response && error.response.data) {
+          setErrors(error.response.data); // Respons error memiliki data
+        } else {
+          setErrors({ message: "An unexpected error occurred" }); // Error tidak memiliki data
+        }
       });
   };
 
@@ -82,7 +81,9 @@ export default function login() {
           <div className="text-center mb-5">
             <img src={"/images/logo-jbg.png"} width={"100"} />
             <h4>
-              <strong className="text-white mt-3">DESA SENDANGADI, MLATI</strong>
+              <strong className="text-white mt-3">
+                DESA SENDANGADI, MLATI
+              </strong>
             </h4>
           </div>
           <div className="card rounded-4 shadow-sm border-top-success">
