@@ -176,7 +176,7 @@ export default function RolesEdit() {
                             type="checkbox"
                             value={permission.name}
                             defaultChecked={permissionsData.some(
-                              (name) => name === permission.name ?? true
+                              (name) => name === permission.name
                             )}
                             onChange={handleCheckboxChange}
                             id={`check-${permission.id}`}

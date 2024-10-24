@@ -246,7 +246,7 @@ export default function UsersEdit() {
                             type="checkbox"
                             value={role.name}
                             defaultChecked={rolesData.some(
-                              (name) => name === role.name ?? true
+                              (name) => name === role.name
                             )}
                             onChange={handleCheckboxChange}
                             id={`check-${role.id}`}
