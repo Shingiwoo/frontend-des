@@ -10,9 +10,10 @@ import Cookies from "js-cookie";
 //import toast
 import toast from "react-hot-toast";
 
-export default function SlidersCreate(props) {
+export default function PhotosCreate(props) {
   //state
   const [image, setImage] = useState("");
+  const [caption, setCaption] = useState("");
 
   //state errors
   const [errors, setErros] = useState([]);
@@ -20,8 +21,8 @@ export default function SlidersCreate(props) {
   //token from cookies
   const token = Cookies.get("token");
 
-  //function "storeSlider"
-  const storeSlider = async (e) => {
+  //function "storePhoto"
+  const storePhoto = async (e) => {
     e.preventDefault();
 
     //define formData
@@ -29,8 +30,9 @@ export default function SlidersCreate(props) {
 
     //append data to "formData"
     formData.append("image", image);
+    formData.append("caption", caption);
 
-    await Api.post("/api/admin/sliders", formData, {
+    await Api.post("/api/admin/photos", formData, {
       //header
       headers: {
         //header Bearer + Token
@@ -60,7 +62,7 @@ export default function SlidersCreate(props) {
   return (
     <div className="card border-0 rounded shadow-sm border-top-success">
       <div className="card-body">
-        <form onSubmit={storeSlider}>
+        <form onSubmit={storePhoto}>
           <div className="mb-3">
             <label className="form-label fw-bold">Image</label>
             <input
@@ -73,6 +75,20 @@ export default function SlidersCreate(props) {
           </div>
           {errors.image && (
             <div className="alert alert-danger">{errors.image[0]}</div>
+          )}
+
+          <div className="mb-3">
+            <label className="form-label fw-bold">Caption</label>
+            <input
+              type="text"
+              className="form-control"
+              value={caption}
+              onChange={(e) => setCaption(e.target.value)}
+              placeholder="Enter Title Photo"
+            />
+          </div>
+          {errors.caption && (
+            <div className="alert alert-danger">{errors.caption[0]}</div>
           )}
           <div>
             <button type="submit" className="btn btn-md btn-primary me-2">
