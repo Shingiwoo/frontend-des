@@ -31,7 +31,7 @@ export default function WebProductsShow() {
       setProduct(response.data.data);
 
       //title page
-      document.title = `${response.data.data.title} - Desa Santri`;
+      document.title = `${response.data.data.title} - Desa Sendangadi`;
 
       //setLoadingproduct "false"
       setLoadingProduct(false);
