@@ -54,8 +54,8 @@ export default function WebProductsShow() {
             <div className="col-md-12">
               <div className="card border-0 shadow-sm rounded-3">
                 <div className="card-body post-content">
-                  <img src={product.image} class="rounded w-100 mb-3" />
-                  <table class="table">
+                  <img src={product.image} className="rounded w-100 mb-3" />
+                  <table className="table">
                     <tbody>
                       <tr>
                         <th
@@ -80,7 +80,7 @@ export default function WebProductsShow() {
                           Deskripsi
                         </th>
                         <td>:</td>
-                        <td colspan="2">
+                        <td colSpan="2">
                           <p
                             dangerouslySetInnerHTML={{
                               __html: product.content,

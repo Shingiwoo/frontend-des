@@ -66,7 +66,7 @@ export default function WebPhotosIndex() {
   return (
     <LayoutWeb>
       <div className="container mt-4 mb-3">
-        <div classname="row">
+        <div className="row">
           <div className="col-md-12">
             <h5 className="text-uppercase">
               <i className="fa fa-images"></i> GALERI FOTO

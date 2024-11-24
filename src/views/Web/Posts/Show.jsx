@@ -96,7 +96,7 @@ export default function WebPostsShow() {
                   <hr />
                   <img
                     src={post.image}
-                    class="rounded-3 w-100 mb-3"
+                    className="rounded-3 w-100 mb-3"
                     alt={post.title}
                   />
                   <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
@@ -113,22 +113,21 @@ export default function WebPostsShow() {
               <Loading />
             ) : (
               posts.map((post) => (
-                <Link
-                  to={`/posts/${post.slug}`}
+                <Link key={post.id} to={`/posts/${post.slug}`}
                   className="text-decoration-none"
                 >
-                  <div class="card mb-3 w-100 rounded-3 border-0 shadow-sm">
-                    <div class="row g-0 mb-0 pb-0">
-                      <div class="col-md-5">
+                  <div className="card mb-3 w-100 rounded-3 border-0 shadow-sm">
+                    <div className="row g-0 mb-0 pb-0">
+                      <div className="col-md-5">
                         <img
                           src={post.image}
-                          class="img-fluid h-100 w-100 object-fit-cover rounded-start"
+                          className="img-fluid h-100 w-100 object-fit-cover rounded-start"
                           alt={post.title}
                         />
                       </div>
-                      <div class="col-md-7">
-                        <div class="card-body">
-                          <span class="card-title">
+                      <div className="col-md-7">
+                        <div className="card-body">
+                          <span className="card-title">
                             {post.title.length > 30
                               ? `${post.title.substring(0, 30)}...`
                               : post.title}
