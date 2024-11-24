@@ -19,10 +19,10 @@ export default function Navbar() {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item me-4">
-                <i className="fa fa-envelope"></i> info@desa-santri.com
+                <i className="fa fa-envelope"></i> info@desa-sendangadi.com
               </li>
               <li className="nav-item me-4">
-                <i className="fa fa-phone"></i> +62 857-8585-2224
+                <i className="fa fa-phone"></i> +62 812-2674-9684
               </li>
             </ul>
             <div>
@@ -48,17 +48,17 @@ export default function Navbar() {
               <div className="header-logo">
                 <a href="#">
                   <img
-                    src="/images/logo-jbg.png"
+                    src="/images/logo-sdi.png"
                     width="110"
                     className="img-responsive"
                   />
                 </a>
               </div>
               <div className="header-text">
-                <h2 className="header-school">DESA SANTRI</h2>
+                <h2 className="header-school">DESA SENDANGADI</h2>
                 <hr />
                 <div className="header-address">
-                  Jln. Diponegoro No. 58, Wonosalam, Jombang, Jawa Timur, 61473
+                Jl. Magelang No.7,5, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285
                 </div>
               </div>
             </div>
@@ -67,17 +67,17 @@ export default function Navbar() {
               <div className="col-md-6 text-center mt-3">
                 <a href="#">
                   <img
-                    src="/images/logo-jbg.png"
+                    src="/images/logo-sdi.png"
                     width="110"
                     className="img-responsive"
                   />
                 </a>
               </div>
               <div className="col-md-12 text-center text-white mb-3">
-                <h2 className="header-school">DESA SANTRI</h2>
+                <h2 className="header-school">DESA SENDANGADI</h2>
                 <hr />
-                <div className="header-address">
-                  Jln. Diponegoro No. 58, Wonosalam, Jombang, Jawa Timur, 61473
+                <div className="header-address">                  
+                Jl. Magelang No.7,5, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285
                 </div>
               </div>
             </div>
